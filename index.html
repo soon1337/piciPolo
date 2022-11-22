@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = "header">Pici Polo</h1>
+</body>
+</html>
+    <h3>Wpisz liczbę</h3>
+    <label for=""> <input type="number" id="inputNumber"> <br>
+    <button onclick = "chuj()" id = "przycisk">OK</button>
+
+
+<script>
+    function chuj()
+    {
+        let inputNumber = document.getElementById("inputNumber").valueAsNumber;
+
+        let rand = Math.floor(Math.random() * 100) + 1;
+
+        if (rand % 2 == 0)
+        {
+            let number = inputNumber + 1;
+            alert(number + ", gramy na większe, wygrałem.");
+        }
+        else
+        {
+            let number = inputNumber - 1;
+            alert(number + ", gramy na mniejsze, wygrałem.");
+        }
+    }
+    
+</script>
+
+<style>
+
+body
+{
+    margin: 0px;
+    background-color: rgb(53, 53, 53);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#header
+{
+    text-align: center;
+    font-size: 40px;
+}
+
+h3
+{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 120px;
+    font-size: 24px;
+}
+
+#przycisk
+{
+    margin-top: 10px;
+    width: 50px;
+    transition: transform .5s, background-color .5s;
+}
+#przycisk:hover
+{
+    transform: scale(1.1);
+    background-color: lime;
+}
+</style>
